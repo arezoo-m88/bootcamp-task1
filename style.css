@@ -1,0 +1,187 @@
+
+@font-face {
+    font-family: "vazir";
+    font-weight: 400;
+    font-style: normal;
+    src: url("/assets/fonts/Vazir.woff") format("woff");
+}
+
+@font-face {
+    font-family: "vazir";
+    font-weight: 700;
+    font-style: normal;
+    src: url("/assets/fonts/Vazir-Bold.woff") format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "vazir";
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primarycolor: #219F95;
+    --mainwhite: #fff;
+    --mainblack: #1E1E1E;
+    --maingray: #696969;
+    --bodycolor: #FFFFFF;
+}
+
+body{
+    background-color:var(--bodycolor) ;
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+.main-title{
+    color: var(--mainblack);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    padding-right: 3rem;
+}
+
+.items{
+    display: grid;
+    gap: 2.2rem;
+    font-size: 1rem;
+    padding-right:2rem ;
+    padding-left: 2rem;
+}
+.container{
+    max-width: 1336px;
+    margin: 3.5rem auto;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.item__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+}
+
+.item__title__text--num{
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    color: #234894;
+    background-color: #AFCEDD;
+    border-radius: 6px;
+    padding: 0.25rem 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.item__title__text--upload{
+    color: #234894;
+    font-weight: 700;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.item__title--date{
+    font-size: 0.75rem;
+    color: var(--maingray);
+}
+
+.item__description{
+    display: flex;
+    flex-direction: column;
+}
+
+.item__description--id{
+    font-size: 0.75rem;
+    color: var(--maingray);
+}
+
+.item__description--member{
+    font-size: 1rem;
+    color: var(--mainblack);
+    font-weight: 700;
+}
+
+.item__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item__info__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item__info__block--img{
+    width: 40px;
+    height: 40px;
+    border-radius: 0.5rem;
+    margin-left: 0.5rem;
+    display:none;
+}
+
+.item__info__block--name{
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.item__info__submit{
+    background-color: var(--primarycolor);
+    color: var(--mainwhite);
+    outline: 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primarycolor);
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+@media screen and (min-width:425px) {
+    .item__info__block--img {
+        display: block;
+    }
+    .item__info__block {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .item__description--member {
+        font-size: 1.2rem;
+    }
+    .item__info__block--name {
+        font-size: 1rem;
+    }
+    .item__info__submit {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item__info__submit {
+        font-size: 1rem;
+        padding: 1rem 1rem;
+    }
+}
